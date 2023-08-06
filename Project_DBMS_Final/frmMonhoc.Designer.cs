@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gB_DanhSach = new System.Windows.Forms.GroupBox();
             this.dgw_MonHoc = new System.Windows.Forms.DataGridView();
-            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gB_TTCT = new System.Windows.Forms.GroupBox();
-            this.txb_MaGV = new System.Windows.Forms.TextBox();
-            this.lbl_SoTC = new System.Windows.Forms.Label();
             this.txb_HocKy = new System.Windows.Forms.TextBox();
+            this.txb_SoTC = new System.Windows.Forms.TextBox();
+            this.lbl_SoTC = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txb_TenMon = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,9 +44,11 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.lbl_DSMH = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gB_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_MonHoc)).BeginInit();
             this.gB_TTCT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gB_DanhSach
@@ -71,48 +70,21 @@
             this.dgw_MonHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgw_MonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgw_MonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgw_MonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaMon,
-            this.TenMon,
-            this.HocKy,
-            this.SoTC});
             this.dgw_MonHoc.Location = new System.Drawing.Point(6, 19);
             this.dgw_MonHoc.Name = "dgw_MonHoc";
             this.dgw_MonHoc.Size = new System.Drawing.Size(446, 342);
             this.dgw_MonHoc.TabIndex = 0;
-            // 
-            // MaMon
-            // 
-            this.MaMon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaMon.HeaderText = "Mã môn";
-            this.MaMon.Name = "MaMon";
-            // 
-            // TenMon
-            // 
-            this.TenMon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenMon.HeaderText = "Tên môn";
-            this.TenMon.Name = "TenMon";
-            // 
-            // HocKy
-            // 
-            this.HocKy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HocKy.HeaderText = "Học kỳ";
-            this.HocKy.Name = "HocKy";
-            // 
-            // SoTC
-            // 
-            this.SoTC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoTC.HeaderText = "Số tín chỉ";
-            this.SoTC.Name = "SoTC";
+            this.dgw_MonHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_MonHoc_CellContentClick);
             // 
             // gB_TTCT
             // 
             this.gB_TTCT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gB_TTCT.Controls.Add(this.txb_MaGV);
-            this.gB_TTCT.Controls.Add(this.lbl_SoTC);
             this.gB_TTCT.Controls.Add(this.txb_HocKy);
+            this.gB_TTCT.Controls.Add(this.txb_SoTC);
+            this.gB_TTCT.Controls.Add(this.lbl_SoTC);
             this.gB_TTCT.Controls.Add(this.label5);
             this.gB_TTCT.Controls.Add(this.txb_TenMon);
             this.gB_TTCT.Controls.Add(this.label2);
@@ -128,33 +100,33 @@
             this.gB_TTCT.TabStop = false;
             this.gB_TTCT.Text = "Thông tin chi tiết";
             // 
-            // txb_MaGV
+            // txb_HocKy
             // 
-            this.txb_MaGV.Location = new System.Drawing.Point(93, 160);
-            this.txb_MaGV.Name = "txb_MaGV";
-            this.txb_MaGV.Size = new System.Drawing.Size(145, 22);
-            this.txb_MaGV.TabIndex = 23;
+            this.txb_HocKy.Location = new System.Drawing.Point(93, 171);
+            this.txb_HocKy.Name = "txb_HocKy";
+            this.txb_HocKy.Size = new System.Drawing.Size(145, 22);
+            this.txb_HocKy.TabIndex = 24;
+            // 
+            // txb_SoTC
+            // 
+            this.txb_SoTC.Location = new System.Drawing.Point(93, 128);
+            this.txb_SoTC.Name = "txb_SoTC";
+            this.txb_SoTC.Size = new System.Drawing.Size(145, 22);
+            this.txb_SoTC.TabIndex = 23;
             // 
             // lbl_SoTC
             // 
             this.lbl_SoTC.AutoSize = true;
-            this.lbl_SoTC.Location = new System.Drawing.Point(14, 167);
+            this.lbl_SoTC.Location = new System.Drawing.Point(14, 131);
             this.lbl_SoTC.Name = "lbl_SoTC";
             this.lbl_SoTC.Size = new System.Drawing.Size(57, 15);
             this.lbl_SoTC.TabIndex = 22;
             this.lbl_SoTC.Text = "Số tín chỉ";
             // 
-            // txb_HocKy
-            // 
-            this.txb_HocKy.Location = new System.Drawing.Point(93, 117);
-            this.txb_HocKy.Name = "txb_HocKy";
-            this.txb_HocKy.Size = new System.Drawing.Size(145, 22);
-            this.txb_HocKy.TabIndex = 21;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 124);
+            this.label5.Location = new System.Drawing.Point(14, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 20;
@@ -203,6 +175,7 @@
             this.btn_Xoa.TabIndex = 20;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
@@ -215,6 +188,7 @@
             this.btn_Sua.TabIndex = 19;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Them
             // 
@@ -227,6 +201,7 @@
             this.btn_Them.TabIndex = 18;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // lbl_DSMH
             // 
@@ -240,6 +215,10 @@
             this.lbl_DSMH.TabIndex = 22;
             this.lbl_DSMH.Text = "DANH SÁCH MÔN HỌC";
             this.lbl_DSMH.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmMonhoc
             // 
@@ -255,10 +234,12 @@
             this.Name = "frmMonhoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Môn học";
+            this.Load += new System.EventHandler(this.frmMonhoc_Load);
             this.gB_DanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_MonHoc)).EndInit();
             this.gB_TTCT.ResumeLayout(false);
             this.gB_TTCT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +249,6 @@
         private System.Windows.Forms.GroupBox gB_DanhSach;
         private System.Windows.Forms.DataGridView dgw_MonHoc;
         private System.Windows.Forms.GroupBox gB_TTCT;
-        private System.Windows.Forms.TextBox txb_HocKy;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txb_TenMon;
         private System.Windows.Forms.Label label2;
@@ -278,11 +258,9 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Label lbl_DSMH;
-        private System.Windows.Forms.TextBox txb_MaGV;
         private System.Windows.Forms.Label lbl_SoTC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HocKy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoTC;
+        private System.Windows.Forms.TextBox txb_HocKy;
+        private System.Windows.Forms.TextBox txb_SoTC;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

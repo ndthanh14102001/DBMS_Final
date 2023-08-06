@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gB_DanhSach = new System.Windows.Forms.GroupBox();
             this.dgw_Lop = new System.Windows.Forms.DataGridView();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GVQL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gB_LuaChon = new System.Windows.Forms.GroupBox();
             this.txb_GVQL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +42,11 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Nhap = new System.Windows.Forms.Button();
             this.lbl_LOP = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gB_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_Lop)).BeginInit();
             this.gB_LuaChon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gB_DanhSach
@@ -65,34 +65,14 @@
             // 
             // dgw_Lop
             // 
+            this.dgw_Lop.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgw_Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgw_Lop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenLop,
-            this.MaLop,
-            this.GVQL});
             this.dgw_Lop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgw_Lop.Location = new System.Drawing.Point(3, 18);
             this.dgw_Lop.Name = "dgw_Lop";
             this.dgw_Lop.Size = new System.Drawing.Size(438, 314);
             this.dgw_Lop.TabIndex = 0;
-            // 
-            // TenLop
-            // 
-            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenLop.HeaderText = "Tên lớp";
-            this.TenLop.Name = "TenLop";
-            // 
-            // MaLop
-            // 
-            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaLop.HeaderText = "Mã lớp";
-            this.MaLop.Name = "MaLop";
-            // 
-            // GVQL
-            // 
-            this.GVQL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GVQL.HeaderText = "Giảng viên quản lý";
-            this.GVQL.Name = "GVQL";
+            this.dgw_Lop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_Lop_CellContentClick);
             // 
             // gB_LuaChon
             // 
@@ -175,6 +155,7 @@
             this.btn_Xoa.TabIndex = 16;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
@@ -187,6 +168,7 @@
             this.btn_Sua.TabIndex = 15;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Nhap
             // 
@@ -199,6 +181,7 @@
             this.btn_Nhap.TabIndex = 14;
             this.btn_Nhap.Text = "Thêm";
             this.btn_Nhap.UseVisualStyleBackColor = true;
+            this.btn_Nhap.Click += new System.EventHandler(this.btn_Nhap_Click);
             // 
             // lbl_LOP
             // 
@@ -212,6 +195,10 @@
             this.lbl_LOP.TabIndex = 27;
             this.lbl_LOP.Text = "QUẢN LÝ LỚP";
             this.lbl_LOP.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmLop
             // 
@@ -227,10 +214,12 @@
             this.Name = "frmLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lớp học";
+            this.Load += new System.EventHandler(this.frmLop_Load);
             this.gB_DanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_Lop)).EndInit();
             this.gB_LuaChon.ResumeLayout(false);
             this.gB_LuaChon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,10 +237,8 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Nhap;
         private System.Windows.Forms.Label lbl_LOP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GVQL;
         private System.Windows.Forms.TextBox txb_GVQL;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
