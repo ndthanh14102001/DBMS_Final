@@ -18,7 +18,7 @@ namespace Project_DBMS_Final
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=MSI\EXPRESS;Initial Catalog=QLDSV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-HISKP3B\SQLEXPRESS;Initial Catalog=QLDSV;Integrated Security=True");
 
         private void LayDSMonHoc()
         {
@@ -42,7 +42,7 @@ namespace Project_DBMS_Final
         {
 
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=QLDSV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=DESKTOP-HISKP3B\SQLEXPRESS;Initial Catalog=QLDSV;Integrated Security=True";
 
             //SqlDataReader dr;
             conn.Open();
@@ -60,7 +60,7 @@ namespace Project_DBMS_Final
             dgw_TCD.Rows.Clear();
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-            SqlCommand cmd = new SqlCommand("SP_LayDSHS", conn);
+            SqlCommand cmd = new SqlCommand("SP_lAYDSHS", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader dr;
             conn.Open();
