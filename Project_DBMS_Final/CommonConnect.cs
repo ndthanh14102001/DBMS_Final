@@ -21,7 +21,7 @@ namespace Project_DBMS_Final
         public SqlConnection Connected()
         {
             string connect = SystemInformation.UserDomainName.ToString();
-            string source = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=QLDSV;Integrated Security=True";
+            string source = @"Data Source=DESKTOP-HISKP3B\SQLEXPRESS;Initial Catalog=QLDSV;Integrated Security=True";
             conn = new SqlConnection(source);
             conn.Open();
             return conn;
