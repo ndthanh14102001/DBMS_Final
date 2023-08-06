@@ -16,5 +16,10 @@ namespace Project_DBMS_Final
         {
             InitializeComponent();
         }
+
+        private void frmQLDiem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
