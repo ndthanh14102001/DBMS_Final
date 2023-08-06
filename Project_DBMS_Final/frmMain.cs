@@ -106,5 +106,10 @@ namespace Project_DBMS_Final
             frmMonhoc formMonHoc = new frmMonhoc();
             AddForm(formMonHoc);
         }
+        private void mnu_DiemTK_Click(object sender, EventArgs e)
+        {
+            frmThongKe formThongKe = new frmThongKe(); 
+            AddForm(formThongKe); 
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Project_DBMS_Final
         {
             InitializeComponent();
         }
+
+        private void txb_MaSV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
