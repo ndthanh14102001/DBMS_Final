@@ -18,7 +18,7 @@ namespace Project_DBMS_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThongKe());
+            Application.Run(new frmMain());
         }
     }
 }

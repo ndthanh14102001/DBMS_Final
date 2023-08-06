@@ -32,6 +32,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mnuItem_Hethong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_Trangchu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuItem_DanhMuc = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_Mon = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_Lop = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Content = new System.Windows.Forms.Panel();
-            this.mnu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,9 +85,16 @@
             // mnu_Trangchu
             // 
             this.mnu_Trangchu.Name = "mnu_Trangchu";
-            this.mnu_Trangchu.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Trangchu.Size = new System.Drawing.Size(126, 22);
             this.mnu_Trangchu.Text = "&Trang chủ";
             this.mnu_Trangchu.Click += new System.EventHandler(this.mnu_Trangchu_Click);
+            // 
+            // mnu_Exit
+            // 
+            this.mnu_Exit.Name = "mnu_Exit";
+            this.mnu_Exit.Size = new System.Drawing.Size(126, 22);
+            this.mnu_Exit.Text = "&Exit";
+            this.mnu_Exit.Click += new System.EventHandler(this.mnu_Exit_Click);
             // 
             // MnuItem_DanhMuc
             // 
@@ -101,14 +108,14 @@
             // mnu_Mon
             // 
             this.mnu_Mon.Name = "mnu_Mon";
-            this.mnu_Mon.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Mon.Size = new System.Drawing.Size(122, 22);
             this.mnu_Mon.Text = "&Môn học";
             this.mnu_Mon.Click += new System.EventHandler(this.mnu_Mon_Click);
             // 
             // mnu_Lop
             // 
             this.mnu_Lop.Name = "mnu_Lop";
-            this.mnu_Lop.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Lop.Size = new System.Drawing.Size(122, 22);
             this.mnu_Lop.Text = "&Lớp";
             this.mnu_Lop.Click += new System.EventHandler(this.mnu_Lop_Click);
             // 
@@ -125,21 +132,21 @@
             // mnu_SV
             // 
             this.mnu_SV.Name = "mnu_SV";
-            this.mnu_SV.Size = new System.Drawing.Size(180, 22);
+            this.mnu_SV.Size = new System.Drawing.Size(153, 22);
             this.mnu_SV.Text = "&Sinh viên";
             this.mnu_SV.Click += new System.EventHandler(this.mnu_SV_Click);
             // 
             // giảngViênToolStripMenuItem
             // 
             this.giảngViênToolStripMenuItem.Name = "giảngViênToolStripMenuItem";
-            this.giảngViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.giảngViênToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.giảngViênToolStripMenuItem.Text = "&Giảng viên";
             this.giảngViênToolStripMenuItem.Click += new System.EventHandler(this.giảngViênToolStripMenuItem_Click);
             // 
             // mnu_Diem
             // 
             this.mnu_Diem.Name = "mnu_Diem";
-            this.mnu_Diem.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Diem.Size = new System.Drawing.Size(153, 22);
             this.mnu_Diem.Text = "&Điểm môn học";
             this.mnu_Diem.Click += new System.EventHandler(this.mnu_Diem_Click);
             // 
@@ -154,7 +161,7 @@
             // mnu_ThongtinSV
             // 
             this.mnu_ThongtinSV.Name = "mnu_ThongtinSV";
-            this.mnu_ThongtinSV.Size = new System.Drawing.Size(180, 22);
+            this.mnu_ThongtinSV.Size = new System.Drawing.Size(163, 22);
             this.mnu_ThongtinSV.Text = "&Thông tin của SV";
             this.mnu_ThongtinSV.Click += new System.EventHandler(this.mnu_ThongtinSV_Click);
             // 
@@ -178,6 +185,7 @@
             this.mnu_DiemTK.Name = "mnu_DiemTK";
             this.mnu_DiemTK.Size = new System.Drawing.Size(187, 22);
             this.mnu_DiemTK.Text = "&Điểm tổng kết của SV";
+            this.mnu_DiemTK.Click += new System.EventHandler(this.mnu_DiemTK_Click);
             // 
             // bt_MH
             // 
@@ -278,13 +286,6 @@
             this.panel_Content.Name = "panel_Content";
             this.panel_Content.Size = new System.Drawing.Size(1170, 577);
             this.panel_Content.TabIndex = 35;
-            // 
-            // mnu_Exit
-            // 
-            this.mnu_Exit.Name = "mnu_Exit";
-            this.mnu_Exit.Size = new System.Drawing.Size(180, 22);
-            this.mnu_Exit.Text = "&Exit";
-            this.mnu_Exit.Click += new System.EventHandler(this.mnu_Exit_Click);
             // 
             // frmMain
             // 

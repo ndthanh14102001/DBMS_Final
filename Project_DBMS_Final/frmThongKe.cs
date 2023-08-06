@@ -54,6 +54,7 @@ namespace Project_DBMS_Final
             da.Fill(dt);  // đổ dữ liệu vào kho
             conn.Close();  // đóng kết nối
             dgw_TCD.DataSource = dt; //đổ dữ liệu vào datagridview
+           
         }
         private void LayDSHS()
         {
@@ -70,7 +71,6 @@ namespace Project_DBMS_Final
             {
                 STT = STT + 1;
                 dgw_TCD.Rows.Add(STT, dr.GetValue(0), dr.GetString(1),dr.GetDateTime(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6));
-
             }
             dr.Close();
         }
@@ -151,17 +151,17 @@ namespace Project_DBMS_Final
 
                 dgw_TCD.DataSource = dt;
 
-                //SqlDataReader reader = cmd.ExecuteReader();
-                //SqlDataReader dr;
-                //dr = cmd.ExecuteReader();
-                //int STT = 0;
-               // while (dr.Read())
-                //{
-                //    STT = STT + 1;
-                //    dgw_TCD.Rows.Add(STT, dr.GetValue(0), dr.GetString(1), dr.GetDateTime(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6));
+            //SqlDataReader reader = cmd.ExecuteReader();
+            //SqlDataReader dr;
+            //dr = cmd.ExecuteReader();
+            //int STT = 0;
+            // while (dr.Read())
+            //{
+            //    STT = STT + 1;
+            //    dgw_TCD.Rows.Add(STT, dr.GetValue(0), dr.GetString(1), dr.GetDateTime(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6));
 
-                //}
-                //dr.Close();
+            //}
+            //dr.Close();
             conn.Close();
 
         }
